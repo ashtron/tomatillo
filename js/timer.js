@@ -9,9 +9,10 @@ function timer() {
     this.time = this.time || document.getElementById('timeInput').value;
 
     var interval = setInterval(function() {
-      that.display.set(that.formatTime(that.time--));
+      that.time--;
+      that.display.set(that.formatTime(that.time));
 
-      if (that.time < 0 || that.display.stopped) {
+      if (that.time <= 0 || that.display.stopped) {
         that.stop(interval);
       }
     }, 1000);
