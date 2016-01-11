@@ -4,13 +4,14 @@ function timer() {
   this.display = new display();
 
   this.start = function() {
-    this.time = document.getElementById('timeInput').value;
     var that = this;
+
+    this.time = this.time || document.getElementById('timeInput').value;
 
     var interval = setInterval(function() {
       that.display.set(that.formatTime(that.time--));
 
-      if (that.time < 0) {
+      if (that.time < 0 || that.display.stopped) {
         that.stop(interval);
       }
     }, 1000);
@@ -32,15 +33,24 @@ function timer() {
 }
 
 function display() {
+  this.stopped = false;
+
   this.set = function(time) {
     document.getElementById('display').innerHTML = time;
   }
 }
 
 var timer = new timer();
-var display = new display();
 
 window.onload = function() {
   var startBtn = document.getElementById('start');
   startBtn.onclick = function() { timer.start() };
+
+  var stopBtn = document.getElementById('stop');
+  stopBtn.onclick = function() { timer.display.stopped = true };
+
+  var resumeBtn = document.getElementById('resume');
+  resumeBtn.onclick = function() {
+    timer.display.stopped = false;
+    timer.start() };
 }
