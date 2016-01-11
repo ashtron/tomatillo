@@ -1,15 +1,16 @@
 function timer() {
-  this.time = 500;
+  this.time = 0;
 
   this.display = new display();
 
   this.start = function() {
+    this.time = document.getElementById('timeInput').value;
     var that = this;
 
     var interval = setInterval(function() {
       that.display.set(that.formatTime(that.time--));
 
-      if (this.time <= 0) {
+      if (that.time < 0) {
         that.stop(interval);
       }
     }, 1000);
@@ -32,7 +33,7 @@ function timer() {
 
 function display() {
   this.set = function(time) {
-    display.innerHTML = time;
+    document.getElementById('display').innerHTML = time;
   }
 }
 
@@ -42,6 +43,4 @@ var display = new display();
 window.onload = function() {
   var startBtn = document.getElementById('start');
   startBtn.onclick = function() { timer.start() };
-
-  var display = document.getElementById('display');
 }
