@@ -54,7 +54,8 @@ function timer() {
   };
 
   this.setDisplay = function() {
-    this.display.innerHTML = this.formatTime(this.time);
+    var formattedTime = this.formatTime(this.time);
+    this.display.innerHTML = document.title = formattedTime;
   };
 }
 
