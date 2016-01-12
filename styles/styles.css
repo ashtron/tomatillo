@@ -17,6 +17,15 @@
   position: absolute;
   text-align: center;
   width: 355px;
+  margin-top: 54%;
+}
+
+#buttons {
+  margin-top: 5px;
+}
+
+#display {
+  font-size: 68px;
 }
 
 body {
