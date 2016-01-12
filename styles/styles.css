@@ -1,25 +1,17 @@
-#tomatillo {
-  margin-top: -210px;
-  width: 382px;
-  height: 584px;
+#timer {
+  width: 355px;
   position: absolute;
+  margin: auto;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-#interface {
-  margin-top: 210px;
-  position: relative;
-  margin-left: 92px;
+#tomatillo {
+  width: 355px;
 }
 
-#buttons {
-  margin-left: 25px;
-  margin-top: 8px;
-}
-
-#display {
-  font-size: 85px;
-}
-
-#timeInput {
-  margin-left: 22px;
+body {
+  background-color: #faf8ef;
 }
