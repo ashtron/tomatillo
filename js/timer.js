@@ -1,25 +1,37 @@
 function timer() {
-  this.time = 0;
+  this.init = function() {
+    var that = this;
 
-  this.display = new display();
+    this.time = 0;
+    this.running = false;
+
+    this.display = document.getElementById('display');
+    this.startBtn = document.getElementById('start');
+    this.stopBtn = document.getElementById('stop');
+
+    this.startBtn.onclick = function() { that.start() };
+    this.stopBtn.onclick = function() { that.stop() };
+  };
 
   this.start = function() {
     var that = this;
 
+    this.running = true;
     this.time = this.time || document.getElementById('timeInput').value;
 
-    var interval = setInterval(function() {
+    this.interval = setInterval(function() {
       that.time--;
-      that.display.set(that.formatTime(that.time));
+      that.display.innerHTML = that.formatTime(that.time);
 
       if (that.time <= 0 || that.display.stopped) {
-        that.stop(interval);
+        that.stop(that.interval);
       }
     }, 1000);
   };
 
   this.stop = function(interval) {
-    clearInterval(interval);
+    clearInterval(this.interval);
+    this.running = false;
   };
 
   this.formatTime = function(time) {
@@ -33,25 +45,8 @@ function timer() {
   }
 }
 
-function display() {
-  this.stopped = false;
-
-  this.set = function(time) {
-    document.getElementById('display').innerHTML = time;
-  }
-}
-
 var timer = new timer();
 
 window.onload = function() {
-  var startBtn = document.getElementById('start');
-  startBtn.onclick = function() { timer.start() };
-
-  var stopBtn = document.getElementById('stop');
-  stopBtn.onclick = function() { timer.display.stopped = true };
-
-  var resumeBtn = document.getElementById('resume');
-  resumeBtn.onclick = function() {
-    timer.display.stopped = false;
-    timer.start() };
+  timer.init();
 }
