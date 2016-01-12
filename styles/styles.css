@@ -1,7 +1,7 @@
 #timer {
   width: 355px;
   position: absolute;
-  margin: auto;
+  margin: 0 auto;
   top: 10%;
   right: 0;
   bottom: 0;
@@ -9,6 +9,13 @@
 }
 
 #tomatillo {
+  width: 355px;
+  position: absolute;
+}
+
+#interface {
+  position: absolute;
+  text-align: center;
   width: 355px;
 }
 
