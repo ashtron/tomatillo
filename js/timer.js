@@ -14,18 +14,18 @@ angular.module('tomatillo', [])
         $scope.$apply();
 
         if ($scope.time <= 0) {
-          $scope.stop($scope.interval);
+          $scope.pause($scope.interval);
         }
       }, 1000);
     };
 
-    $scope.stop = function(interval) {
+    $scope.pause = function(interval) {
       clearInterval($scope.interval);
       $scope.running = false;
     };
 
     $scope.reset = function() {
-      $scope.stop();
+      $scope.pause();
       $scope.time = 0;
     };
 
