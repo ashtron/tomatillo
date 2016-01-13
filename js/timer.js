@@ -6,9 +6,9 @@ angular.module('tomatillo', [])
 
     $scope.start = function() {
       $scope.running = true;
+      $scope.formattedTime = $scope.formatTime($scope.time);
 
       $scope.interval = setInterval(function() {
-        console.log($scope.formattedTime);
         $scope.time--;
         $scope.formattedTime = $scope.formatTime($scope.time);
         $scope.$apply();
