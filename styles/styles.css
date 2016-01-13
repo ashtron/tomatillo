@@ -17,7 +17,7 @@
   position: absolute;
   text-align: center;
   width: 355px;
-  margin-top: 54%;
+  margin-top: 50%;
 }
 
 #buttons {
@@ -25,7 +25,11 @@
 }
 
 #display {
-  font-size: 68px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 108px;
 }
 
 body {
