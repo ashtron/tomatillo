@@ -29,7 +29,15 @@
   -webkit-text-stroke-color: black;
   font-family: Montserrat;
   color: #fff;
-  font-size: 108px;
+  font-size: 100px;
+}
+
+.glyphicon-menu-hamburger {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #5C884B;
+  font-size: 25px;
+  padding: 25px;
+  color: #B9C559;
 }
 
 body {
