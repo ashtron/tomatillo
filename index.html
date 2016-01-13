@@ -9,7 +9,15 @@
   </head>
 
   <body>
-    <div class='glyphicon glyphicon-menu-hamburger'></div>
+    <div
+       id='menu-button'
+       class='glyphicon glyphicon-menu-hamburger'
+       ng-init="isOpen = false"
+       ng-click="isOpen = !isOpen">
+    </div>
+
+    <div ng-class="{'menu': !isOpen, 'menu open': isOpen}"></div>
+
     <div id='timer'>
       <img id='tomatillo' src='images/tomatillo.svg' />
       <div id='interface'>

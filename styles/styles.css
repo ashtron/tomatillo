@@ -40,6 +40,23 @@
   color: #B9C559;
 }
 
+.menu.open {
+  left: 0px;
+}
+
+.menu {
+  transition: left 1s;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  border-right: solid 1px;
+  position: absolute;
+}
+
+#menu-button {
+  position: absolute;
+}
+
 body {
   background-color: #faf8ef;
 }
