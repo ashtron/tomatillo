@@ -1,6 +1,7 @@
 <html ng-app='tomatillo' ng-controller='timerCtrl'>
   <head>
     <title>{{formattedTime}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script type='text/javascript' src='js/timer.js'></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
@@ -12,9 +13,11 @@
       <img id='tomatillo' src='images/tomatillo.svg' />
       <div id='interface'>
           <div id='display'>{{formattedTime}}</div>
-          <input ng-model='time' id='timeInput' type='text' placeholder='Time in seconds'></input>
 
         <div id='buttons'>
+          <button id='work' ng-click='work()'>Work</button>
+          <button id='short-break' ng-click='shortBreak()'>Short Break</button>
+          <button id='long-break' ng-click='longBreak()'>Long Break</button>
           <button id='start' ng-click='start()'>Start</button>
           <button id='stop' ng-click='stop()'>Stop</button>
           <button id='reset' ng-click='reset()'>Reset</button>

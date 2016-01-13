@@ -29,6 +29,21 @@ angular.module('tomatillo', [])
       $scope.time = 0;
     };
 
+    $scope.work = function() {
+      $scope.time = 25 * 60;
+      $scope.start();
+    };
+
+    $scope.shortBreak = function() {
+      $scope.time = 5 * 60;;
+      $scope.start();
+    };
+
+    $scope.longBreak = function() {
+      $scope.time = 15 * 60;
+      $scope.start();
+    };
+
     $scope.formatTime = function(time) {
       var hours = Math.floor(time / 60);
       if (hours < 10) { hours = "0" + hours }
