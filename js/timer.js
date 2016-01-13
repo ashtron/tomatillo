@@ -1,66 +1,41 @@
-function timer() {
-  this.init = function() {
-    var that = this;
+angular.module('tomatillo', [])
+  .controller('timerCtrl', function timerCtrl($scope) {
+    $scope.time = 0;
+    $scope.formattedTime = '00:00'
+    $scope.running = false;
 
-    this.time = 0;
-    this.running = false;
+    $scope.start = function() {
+      $scope.running = true;
 
-    this.display = document.getElementById('display');
-    this.startBtn = document.getElementById('start');
-    this.stopBtn = document.getElementById('stop');
-    this.resetBtn = document.getElementById('reset');
+      $scope.interval = setInterval(function() {
+        console.log($scope.formattedTime);
+        $scope.time--;
+        $scope.formattedTime = $scope.formatTime($scope.time);
+        $scope.$apply();
 
-    this.startBtn.onclick = function() { that.start() };
-    this.stopBtn.onclick = function() { that.stop() };
-    this.resetBtn.onclick = function() { that.reset() };
-  };
+        if ($scope.time <= 0) {
+          $scope.stop($scope.interval);
+        }
+      }, 1000);
+    };
 
-  this.start = function() {
-    var that = this;
+    $scope.stop = function(interval) {
+      clearInterval($scope.interval);
+      $scope.running = false;
+    };
 
-    this.running = true;
-    this.time = this.time || document.getElementById('timeInput').value;
-    this.setDisplay();
+    $scope.reset = function() {
+      $scope.stop();
+      $scope.time = 0;
+    };
 
-    this.interval = setInterval(function() {
-      that.time--;
-      that.setDisplay();
+    $scope.formatTime = function(time) {
+      var hours = Math.floor(time / 60);
+      if (hours < 10) { hours = "0" + hours }
 
-    if (that.time <= 0) {
-        that.stop(that.interval);
-      }
-    }, 1000);
-  };
+      var seconds = time % 60
+      if (seconds < 10) { seconds = "0" + seconds }
 
-  this.stop = function(interval) {
-    clearInterval(this.interval);
-    this.running = false;
-  };
-
-  this.reset = function() {
-    this.stop();
-    this.time = 0;
-    this.setDisplay();
-  };
-
-  this.formatTime = function(time) {
-    var hours = Math.floor(time / 60);
-    if (hours < 10) { hours = "0" + hours }
-
-    var seconds = time % 60
-    if (seconds < 10) { seconds = "0" + seconds }
-
-    return hours + ":" + seconds;
-  };
-
-  this.setDisplay = function() {
-    var formattedTime = this.formatTime(this.time);
-    this.display.innerHTML = document.title = formattedTime;
-  };
-}
-
-var timer = new timer();
-
-window.onload = function() {
-  timer.init();
-}
+      return hours + ":" + seconds;
+    };
+  });
