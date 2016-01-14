@@ -38,7 +38,7 @@
           <button id='work' ng-click='work()'>Work</button>
           <button id='short-break' ng-click='shortBreak()'>Short Break</button>
           <button id='long-break' ng-click='longBreak()'>Long Break</button>
-          <button id='start' ng-click='start()' ng-hide='running'>Start</button>
+          <button id='start' ng-click='start()' ng-hide='running' ng-disabled='time <= 0'>Start</button>
           <button id='pause' ng-click='pause()' ng-show='running'>Pause</button>
           <button id='reset' ng-click='reset()'>Reset</button>
         <div>
