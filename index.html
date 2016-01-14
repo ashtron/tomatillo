@@ -18,7 +18,14 @@
     </div>
 
     <div ng-class="{'menu': !isOpen, 'menu open': isOpen}">
-      <button class='nav-btn'>Customize</button>
+      <button
+        class='nav-btn'
+        ng-init="customizing = false"
+        ng-click="customizing = !customizing">Customize
+      </button>
+
+      <div ng-class="{'customize-form': !customizing, 'customize-form customizing': customizing}"></div>
+
       <button class='nav-btn'>Do Something Else</button>
     </div>
 
