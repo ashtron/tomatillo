@@ -52,16 +52,17 @@
 }
 
 .customize-form {
-  background-color: #faf8ef;
-  border-right: solid 1px;
-  width: 100%;
-  height: 0%;
-  transition: height 1s, transform 1s;
+  transition: left 1s;
+  left: -20%;
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  background-color: gray;
 }
 
 .customizing {
-  transition: height 1s, transform 1s;
-  height: 20%;
+  left: 20%;
+  transition: left 1s;
 }
 
 .menu {
