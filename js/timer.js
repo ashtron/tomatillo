@@ -27,6 +27,7 @@ angular.module('tomatillo', [])
     $scope.reset = function() {
       $scope.pause();
       $scope.time = 0;
+      $scope.formattedTime = '00:00';
     };
 
     $scope.work = function() {
