@@ -5,6 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script type='text/javascript' src='js/timer.js'></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' href='styles/styles.css'>
   </head>
 
@@ -16,7 +17,10 @@
        ng-click="isOpen = !isOpen">
     </div>
 
-    <div ng-class="{'menu': !isOpen, 'menu open': isOpen}"></div>
+    <div ng-class="{'menu': !isOpen, 'menu open': isOpen}">
+      <button class='nav-btn'>Customize</button>
+      <button class='nav-btn'>Do Something Else</button>
+    </div>
 
     <div id='timer'>
       <img id='tomatillo' src='images/tomatillo.svg' />

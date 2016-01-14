@@ -56,8 +56,22 @@
   left: -20%;
   width: 20%;
   height: 100%;
-  border-right: solid 5px #5C884B;
   position: absolute;
+  background-color: #5C884B;
+}
+
+.nav-btn {
+  outline: none;
+  font-family: Playfair Display;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  height: 7%;
+  background-color: inherit;
+  border: none;
+}
+
+.nav-btn:hover {
   background-color: #B9C559;
 }
 
