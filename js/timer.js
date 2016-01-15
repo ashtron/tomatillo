@@ -3,6 +3,9 @@ angular.module('tomatillo', [])
     $scope.time = 0;
     $scope.formattedTime = '00:00'
     $scope.running = false;
+    $scope.lengths = {
+      'session':25*60, 'shortBreak':10*60, 'longBreak':15*60
+    };
 
     $scope.start = function() {
       $scope.running = true;
@@ -31,17 +34,17 @@ angular.module('tomatillo', [])
     };
 
     $scope.work = function() {
-      $scope.time = 25 * 60;
+      $scope.time = $scope.lengths['session'];
       $scope.start();
     };
 
     $scope.shortBreak = function() {
-      $scope.time = 5 * 60;;
+      $scope.time = $scope.lengths['shortBreak'];
       $scope.start();
     };
 
     $scope.longBreak = function() {
-      $scope.time = 15 * 60;
+      $scope.time = $scope.lengths['longBreak'];
       $scope.start();
     };
 

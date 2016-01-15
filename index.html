@@ -25,10 +25,10 @@
       </button>
         <div ng-class="{'setting':!adjustingSessionLength,
           'setting active-setting':adjustingSessionLength}">
-          <span ng-show='!editingSessionLength'>{{time}} minutes</span>
+          <span ng-show='!editingSessionLength'>{{lengths['session']}} seconds</span>
           <input
             ng-show='editingSessionLength'
-            ng-model='time'>
+            ng-model='lengths["session"]'>
           </input>
           <button
             ng-init'editingSessionLength = false'
