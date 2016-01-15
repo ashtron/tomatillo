@@ -18,7 +18,8 @@
     </div>
 
     <div ng-class="{'settings': !customizing, 'settings customizing': customizing}">
-      <button class='nav-btn'>Session Length</button>
+      <button class='nav-btn' ng-init='adjustingSessionLength = false' ng-click='adjustingSessionLength = !adjustingSessionLength'>Session Length</button>
+        <div ng-class="{'setting':!adjustingSessionLength, 'setting active-setting':adjustingSessionLength}"></div>
       <button class='nav-btn'>Short Break Length</button>
       <button class='nav-btn'>Long Break Length</button>
       <button class='nav-btn'>Notification</button>
