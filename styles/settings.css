@@ -17,6 +17,7 @@
 }
 
 .setting {
+  overflow: hidden;
   border: none;
   border-right: 1px solid #B0AC92;
   transition: height 1s;
