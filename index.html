@@ -17,13 +17,13 @@
        ng-click="isOpen = !isOpen">
     </div>
 
-    <div ng-class="{'customize-form': !customizing, 'customize-form customizing': customizing}"></div>
+    <div ng-class="{'settings': !customizing, 'settings customizing': customizing}"></div>
 
     <div ng-class="{'menu': !isOpen, 'menu open': isOpen}">
       <button
         class='nav-btn'
         ng-init="customizing = false"
-        ng-click="customizing = !customizing">Customize
+        ng-click="customizing = !customizing">Settings
       </button>
 
       <button class='nav-btn'>Do Something Else</button>
