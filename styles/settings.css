@@ -11,3 +11,7 @@
   left: 20%;
   transition: left 1s;
 }
+
+.settings > button:hover {
+  background-color: #B0AC92;
+}
