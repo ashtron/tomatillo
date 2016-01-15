@@ -18,8 +18,23 @@
     </div>
 
     <div ng-class="{'settings': !customizing, 'settings customizing': customizing}">
-      <button class='nav-btn' ng-init='adjustingSessionLength = false' ng-click='adjustingSessionLength = !adjustingSessionLength'>Session Length</button>
-        <div ng-class="{'setting':!adjustingSessionLength, 'setting active-setting':adjustingSessionLength}">{{time}} minutes</div>
+      <button
+        class='nav-btn'
+        ng-init='adjustingSessionLength = false'
+        ng-click='adjustingSessionLength = !adjustingSessionLength'>Session Length
+      </button>
+        <div ng-class="{'setting':!adjustingSessionLength,
+          'setting active-setting':adjustingSessionLength}">
+          <span ng-show='!editingSessionLength'>{{time}} minutes</span>
+          <input
+            ng-show='editingSessionLength'
+            ng-model='time'>
+          </input>
+          <button
+            ng-init'editingSessionLength = false'
+            ng-click='editingSessionLength = !editingSessionLength'>Edit
+          </button>
+        </div>
       <button class='nav-btn'>Short Break Length</button>
       <button class='nav-btn'>Long Break Length</button>
       <button class='nav-btn'>Notification</button>

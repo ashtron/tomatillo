@@ -13,3 +13,7 @@ body {
 button[disabled], html input[disabled] {
   opacity: 0.75;
 }
+
+input {
+  outline: none;
+}

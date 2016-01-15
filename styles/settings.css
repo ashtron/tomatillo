@@ -29,6 +29,10 @@
   padding: 0px;
 }
 
+.setting > input {
+  width: 15%;
+}
+
 .active-setting {
   transition: height 1s;
   height: 7%;
