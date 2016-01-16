@@ -26,7 +26,7 @@
         <div ng-class="{'setting':!adjustingLength,
           'setting active-setting':adjustingLength}">
           <div>
-            <span ng-show='!editingSessionLength'>{{lengths['session']}} seconds</span>
+            <span ng-show='!editingSessionLength'>Session: {{lengths['session']}} seconds</span>
             <input
               ng-show='editingSessionLength'
               ng-model='lengths["session"]'>
@@ -40,6 +40,42 @@
               ng-init'editingSessionLength = false'
               ng-click='editingSessionLength = !editingSessionLength'
               ng-show='editingSessionLength'>OK
+            </button>
+          </div>
+
+          <div>
+            <span ng-show='!editingShortBreakLength'>Short break: {{lengths['shortBreak']}} seconds</span>
+            <input
+              ng-show='editingShortBreakLength'
+              ng-model='lengths["shortBreak"]'>
+            </input>
+            <button
+              ng-init'editingShortBreakLength = false'
+              ng-click='editingShortBreakLength = !editingShortBreakLength'
+              ng-hide='editingShortBreakLength'>Edit
+            </button>
+            <button
+              ng-init'editingShortBreakLength = false'
+              ng-click='editingShortBreakLength = !editingShortBreakLength'
+              ng-show='editingShortBreakLength'>OK
+            </button>
+          </div>
+
+          <div>
+            <span ng-show='!editingLongBreak'>Long break: {{lengths['longBreak']}} seconds</span>
+            <input
+              ng-show='editingLongBreak'
+              ng-model='lengths["longBreak"]'>
+            </input>
+            <button
+              ng-init'editingLongBreak = false'
+              ng-click='editingLongBreak = !editingLongBreak'
+              ng-hide='editingLongBreak'>Edit
+            </button>
+            <button
+              ng-init'editingLongBreak = false'
+              ng-click='editingLongBreak = !editingLongBreak'
+              ng-show='editingLongBreak'>OK
             </button>
           </div>
         </div>

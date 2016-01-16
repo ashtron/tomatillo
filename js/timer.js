@@ -4,7 +4,7 @@ angular.module('tomatillo', [])
     $scope.formattedTime = '00:00'
     $scope.running = false;
     $scope.lengths = {
-      'session':25*60, 'shortBreak':10*60, 'longBreak':15*60
+      'session':25*60, 'shortBreak':5*60, 'longBreak':15*60
     };
 
     $scope.start = function() {
