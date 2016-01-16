@@ -20,23 +20,30 @@
     <div ng-class="{'settings': !customizing, 'settings customizing': customizing}">
       <button
         class='nav-btn'
-        ng-init='adjustingSessionLength = false'
-        ng-click='adjustingSessionLength = !adjustingSessionLength'>Session Length
+        ng-init='adjustingLength = false'
+        ng-click='adjustingLength = !adjustingLength'>Lengths
       </button>
-        <div ng-class="{'setting':!adjustingSessionLength,
-          'setting active-setting':adjustingSessionLength}">
-          <span ng-show='!editingSessionLength'>{{lengths['session']}} seconds</span>
-          <input
-            ng-show='editingSessionLength'
-            ng-model='lengths["session"]'>
-          </input>
-          <button
-            ng-init'editingSessionLength = false'
-            ng-click='editingSessionLength = !editingSessionLength'>Edit
-          </button>
+        <div ng-class="{'setting':!adjustingLength,
+          'setting active-setting':adjustingLength}">
+          <div>
+            <span ng-show='!editingSessionLength'>{{lengths['session']}} seconds</span>
+            <input
+              ng-show='editingSessionLength'
+              ng-model='lengths["session"]'>
+            </input>
+            <button
+              ng-init'editingSessionLength = false'
+              ng-click='editingSessionLength = !editingSessionLength'
+              ng-hide='editingSessionLength'>Edit
+            </button>
+            <button
+              ng-init'editingSessionLength = false'
+              ng-click='editingSessionLength = !editingSessionLength'
+              ng-show='editingSessionLength'>OK
+            </button>
+          </div>
         </div>
-      <button class='nav-btn'>Short Break Length</button>
-      <button class='nav-btn'>Long Break Length</button>
+
       <button class='nav-btn'>Notification</button>
     </div>
 

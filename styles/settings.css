@@ -33,6 +33,10 @@
   width: 15%;
 }
 
+.setting button {
+  float: right;
+}
+
 .active-setting {
   transition: max-height 1s;
   max-height: 100%;
