@@ -5,6 +5,7 @@
   height: 100%;
   position: absolute;
   background-color: #D3D0BE;
+  z-index: 1;
 }
 
 .customizing {
@@ -27,18 +28,15 @@
   background-color: #faf8ef;
   outline: none;
   padding: 0px;
+  text-align: center;
 }
 
 .setting > input {
   width: 15%;
 }
 
-.setting button {
+.setting > div {
   float: right;
-}
-
-.setting div div {
-  margin-top: 6px;
 }
 
 .active-setting {

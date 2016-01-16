@@ -5,6 +5,7 @@
   height: 100%;
   position: absolute;
   background-color: #5C884B;
+  z-index: 2;
 }
 
 .menu-button {
