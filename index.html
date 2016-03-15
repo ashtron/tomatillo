@@ -80,7 +80,16 @@
           </div>
         </div>
 
-      <button class='nav-btn'>Notification</button>
+        <button
+          class='nav-btn'
+          ng-init='changingNotification = false'
+          ng-click='changingNotification = !changingNotification'>Notification
+        </button>
+          <div ng-class="{'setting':!changingNotification,
+            'setting active-setting':changingNotification}">
+            <input type='checkbox' ng-model='popUp'>Pop-up
+            <input type='checkbox' ng-model='sound'>Sound
+          </div>
     </div>
 
     <div ng-class="{'menu': !isOpen, 'menu open': isOpen}">

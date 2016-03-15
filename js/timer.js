@@ -2,7 +2,8 @@ angular.module('tomatillo', [])
   .controller('timerCtrl', function timerCtrl($scope) {
     var audio = new Audio('sounds/alert.mp3');
 
-    $scope.notification = 'sound';
+    $scope.popUp = true;
+    $scope.sound = false;
     $scope.time = 0;
     $scope.formattedTime = '00:00'
     $scope.running = false;
@@ -38,9 +39,11 @@ angular.module('tomatillo', [])
     };
 
     $scope.alert = function() {
-      if ($scope.notification === 'sound') {
+      if ($scope.sound) {
         audio.play();
-      } else if ($scope.notification === 'pop-up') {
+      }
+
+      if ($scope.popUp) {
         alert('Time\'s up!');
       }
     };
