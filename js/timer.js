@@ -1,5 +1,8 @@
 angular.module('tomatillo', [])
   .controller('timerCtrl', function timerCtrl($scope) {
+    var audio = new Audio('sounds/alert.mp3');
+
+    $scope.notification = 'sound';
     $scope.time = 0;
     $scope.formattedTime = '00:00'
     $scope.running = false;
@@ -18,6 +21,7 @@ angular.module('tomatillo', [])
 
         if ($scope.time <= 0) {
           $scope.pause($scope.interval);
+          $scope.alert();
         }
       }, 1000);
     };
@@ -33,17 +37,37 @@ angular.module('tomatillo', [])
       $scope.formattedTime = '00:00';
     };
 
+    $scope.alert = function() {
+      if ($scope.notification === 'sound') {
+        audio.play();
+      } else if ($scope.notification === 'pop-up') {
+        alert('Time\'s up!');
+      }
+    };
+
     $scope.work = function() {
+      if ($scope.running) {
+        $scope.reset();
+      }
+
       $scope.time = $scope.lengths['session'] * 60;
       $scope.start();
     };
 
     $scope.shortBreak = function() {
+      if ($scope.running) {
+        $scope.reset();
+      }
+
       $scope.time = $scope.lengths['shortBreak'] * 60;
       $scope.start();
     };
 
     $scope.longBreak = function() {
+      if ($scope.running) {
+        $scope.reset();
+      }
+
       $scope.time = $scope.lengths['longBreak'] * 60;
       $scope.start();
     };
