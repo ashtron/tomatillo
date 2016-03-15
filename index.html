@@ -26,7 +26,7 @@
         <div ng-class="{'setting':!adjustingLength,
           'setting active-setting':adjustingLength}">
           <div>
-            <span ng-show='!editingSessionLength'>Session: {{lengths['session']}} seconds</span>
+            <span ng-show='!editingSessionLength'>Session: {{lengths['session']}} minutes</span>
             <input
               ng-show='editingSessionLength'
               ng-model='lengths["session"]'>
@@ -44,7 +44,7 @@
           </div>
 
           <div>
-            <span ng-show='!editingShortBreakLength'>Short break: {{lengths['shortBreak']}} seconds</span>
+            <span ng-show='!editingShortBreakLength'>Short break: {{lengths['shortBreak']}} minutes</span>
             <input
               ng-show='editingShortBreakLength'
               ng-model='lengths["shortBreak"]'>
@@ -62,7 +62,7 @@
           </div>
 
           <div>
-            <span ng-show='!editingLongBreak'>Long break: {{lengths['longBreak']}} seconds</span>
+            <span ng-show='!editingLongBreak'>Long break: {{lengths['longBreak']}} minutes</span>
             <input
               ng-show='editingLongBreak'
               ng-model='lengths["longBreak"]'>
@@ -89,8 +89,6 @@
         ng-init="customizing = false"
         ng-click="customizing = !customizing">Settings
       </button>
-
-      <button class='nav-btn'>Do Something Else</button>
     </div>
 
     <div id='timer'>
