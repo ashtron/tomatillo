@@ -98,6 +98,19 @@
         ng-init="customizing = false"
         ng-click="customizing = !customizing">Settings
       </button>
+
+      <button
+        class='nav-btn'
+        ng-init='showingAbout = false'
+        ng-click='showingAbout = !showingAbout'>About
+      </button>
+        <p ng-class="{'setting':!showingAbout,
+          'setting active-setting':showingAbout}">
+          Built in AngularJS, tomatillo is a timer based on the
+          <a href='https://en.wikipedia.org/wiki/Pomodoro_Technique'>Pomodoro</a>
+          system for boosting productivity. Check out the source code
+          <a href='https://github.com/ashtron/tomatillo'>here</a>.
+        </p>
     </div>
 
     <div id='timer'>
