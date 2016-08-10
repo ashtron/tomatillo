@@ -38,4 +38,4 @@ tomatillo is an implementation of the [Pomodoro](https://en.wikipedia.org/wiki/P
 ### Phase 2: Schedule Planner
 
 - [ ] Build drag and drop interface for schedule planning:
-![Schedule planner interface](http://i.imgur.com/4DGkirY.png)
+  - [ ] ![Schedule planner interface](http://i.imgur.com/4DGkirY.png)
