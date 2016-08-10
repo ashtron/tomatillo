@@ -9,7 +9,7 @@ tomatillo is an implementation of the [Pomodoro](https://en.wikipedia.org/wiki/P
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] Adjustable time settings
-- [ ] Interface for starting and stopping blocks of time (e.g. "work session," "short break," "long break"
+- [ ] Interface for starting and stopping blocks of time (e.g. "work session," "short break," "long break")
 - [ ] Notification when block is finished
 - [ ] Schedule planner
   - [ ] Drag and drop interface
@@ -33,7 +33,7 @@ tomatillo is an implementation of the [Pomodoro](https://en.wikipedia.org/wiki/P
   - [ ] Implement timer with UI to control time blocks
   - [ ] Implement menu
   - [ ] Implement settings (e.g. for custom times)
-  - [ ] Implement notification system for time blocks ending
+  - [ ] Implement notification system for when time blocks finish
 
 ### Phase 2: Schedule Planner (1 - 2 days)
 
@@ -45,6 +45,6 @@ tomatillo is an implementation of the [Pomodoro](https://en.wikipedia.org/wiki/P
 - [ ] Allow users to describe what they did when a pomodoro finishes
   - [ ] Store descriptions in user calendar using the [FullCalendar](http://fullcalendar.io/) JavaScript plugin
   
-### Phase 4: Bonuses
+### Phase 4: Bonus
 
 - [ ] Adjustable color schemes
