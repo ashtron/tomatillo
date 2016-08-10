@@ -15,4 +15,4 @@ id          | integer   | not null, primary key
 calendar    | string    | not null
 user_id     | integer   | not null, foreign key (references users), indexed
 
-- Calendar objects will be converted to strings using JSON.stringify() for database storage
+- Calendar objects will be converted to strings using `JSON.stringify()` for database storage
