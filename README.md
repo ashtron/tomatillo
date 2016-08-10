@@ -35,7 +35,16 @@ tomatillo is an implementation of the [Pomodoro](https://en.wikipedia.org/wiki/P
   - [ ] Implement settings (e.g. for custom times)
   - [ ] Implement notification system for time blocks ending
 
-### Phase 2: Schedule Planner
+### Phase 2: Schedule Planner (1 - 2 days)
 
 - [ ] Build drag and drop interface for schedule planning:
   - [ ] ![Schedule planner interface](http://i.imgur.com/4DGkirY.png)
+  
+### Phase 3: Storing Progress (1 - 2 days)
+
+- [ ] Allow users to describe what they did when a pomodoro finishes
+  - [ ] Store descriptions in user calendar using the [FullCalendar](http://fullcalendar.io/) JavaScript plugin
+  
+### Phase 4: Bonuses
+
+- [ ] Adjustable color schemes
