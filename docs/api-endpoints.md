@@ -1,11 +1,21 @@
 # API Endpoints
 
-## HTML API
+## Users
 
-## JSON API
+- `POST /api/users`
+- `PATCH /api/users`
 
-### Users
+## Session
 
-### Session
+- `POST /api/session`
+- `DELETE /api/session`
+- `GET /api/session`
 
-### Calendars 
+
+## Calendars 
+
+- `GET /api/calendars`
+- `POST /api/calendars`
+- `GET /api/calendars/:id`
+- `PATCH /api/calendars/:id`
+- `DELETE /api/calendars/:id`
